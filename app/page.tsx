@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import Smiley from "./components/smiley";
 
 export default function Home() {
@@ -6,15 +8,20 @@ export default function Home() {
       <h1>sup</h1>
       <h2>I code</h2>
       <h6>
-        <a href="https://github.com/ktkk">
+        <Link href="https://github.com/ktkk">
           <span className="text-white bg-gradient-to-r bg-clip-text from-red-500 via-green-500 to-blue-500 transition-all duration-300 hover:text-transparent hover:bg-gradient-to-r hover:from-red-500 hover:via-green-500 hover:to-blue-500">
             sometimes
           </span>
-        </a>
+        </Link>
       </h6>
       <div className="flex-grow flex items-center justify-center">
         <Smiley />
       </div>
+      <footer>
+        <Link href="/likes">
+          things I like
+        </Link>
+      </footer>
     </main>
   );
 }
